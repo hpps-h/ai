@@ -1,0 +1,639 @@
+<!DOCTYPE html><html><head><!--<base href="https://daymh.ai/">-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daym-H: Revolutionizing Business with AI</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --primary-color: #C0C0C0;
+    --secondary-color: #A8A8A8;
+    --bg-color: #E8E8E8;
+    --text-color: #333333;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #D0D0D0, #F0F0F0, #D0D0D0);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 1rem auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ai-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 1;
+  }
+
+  .ai-background svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-background .node {
+    fill: var(--text-color);
+    animation: pulse 2s infinite alternate;
+  }
+
+  .ai-background .connection {
+    stroke: var(--text-color);
+    stroke-width: 0.5;
+    animation: dash 5s linear infinite;
+  }
+
+  @keyframes pulse {
+    0% { r: 1.5; }
+    100% { r: 2.5; }
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 100;
+    }
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    padding: 1rem 0;
+    border-radius: 5px;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .revolution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .revolution-item {
+    background: linear-gradient(135deg, #D8D8D8, #F8F8F8, #D8D8D8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .revolution-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .revolution-item h2 {
+    color: var(--text-color);
+    margin-top: 0;
+  }
+
+  .revolution-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    color: var(--text-color);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 250px;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #FFFFFF;
+  }
+
+  .newsletter-form {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .newsletter-form button {
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background: var(--primary-color);
+  }
+
+  #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--secondary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  #back-to-top:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+  }
+
+  #back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-section {
+      margin: 1rem 0;
+    }
+
+    .newsletter-form {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .revolution-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .enhanced-robot-icon {
+    width: 80px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    position: relative;
+  }
+
+  .robot-body {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .robot-head {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .robot-eye {
+    width: 10px;
+    height: 10px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .robot-eye.left {
+    left: 8px;
+  }
+
+  .robot-eye.right {
+    right: 8px;
+  }
+
+  .robot-antenna {
+    width: 4px;
+    height: 15px;
+    background: linear-gradient(to top, #A0A0A0, #C8C8C8);
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .robot-arm {
+    width: 10px;
+    height: 40px;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    position: absolute;
+    top: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .robot-arm.left {
+    left: -5px;
+    transform: rotate(20deg);
+  }
+
+  .robot-arm.right {
+    right: -5px;
+    transform: rotate(-20deg);
+  }
+
+  /* New styles for the brain icon */
+  .brain-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    position: relative;
+  }
+
+  .brain {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    border-radius: 50% 50% 40% 40%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .brain::before, .brain::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    border-radius: 50%;
+  }
+
+  .brain::before {
+    width: 60%;
+    height: 80%;
+    top: -30%;
+    left: -10%;
+    transform: rotate(-30deg);
+  }
+
+  .brain::after {
+    width: 60%;
+    height: 80%;
+    top: -30%;
+    right: -10%;
+    transform: rotate(30deg);
+  }
+
+  .synapse {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #FFFFFF;
+    animation: spark 2s infinite;
+  }
+
+  @keyframes spark {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="ai-background">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <pattern id="ai-network" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle class="node" cx="10" cy="10" r="1.5">
+        <animate attributeName="r" values="1.5;2.5;1.5" dur="2s" repeatCount="indefinite"></animate>
+      </circle>
+      <path class="connection" d="M0 10h20M10 0v20" stroke-dasharray="5,5">
+        <animate attributeName="stroke-dashoffset" from="0" to="10" dur="5s" repeatCount="indefinite"></animate>
+      </path>
+      <path class="connection" d="M0 0l20 20M0 20l20 -20" stroke-dasharray="5,5">
+        <animate attributeName="stroke-dashoffset" from="0" to="10" dur="5s" repeatCount="indefinite"></animate>
+      </path>
+    </pattern>
+    <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:1"></stop>
+      <stop offset="50%" style="stop-color:#E8E8E8;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#C0C0C0;stop-opacity:1"></stop>
+    </linearGradient>
+    <filter id="electricity1">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" seed="0"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displacement"></feDisplacementMap>
+    </filter>
+    <filter id="electricity2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" seed="1"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displacement"></feDisplacementMap>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#ai-network)"></rect>
+  <rect width="100%" height="100%" fill="url(#silverGradient)" style="mix-blend-mode: overlay;">
+    <animate attributeName="opacity" values="0.5;0.7;0.5" dur="3s" repeatCount="indefinite"></animate>
+    <animate attributeName="filter" values="url(#electricity1);url(#electricity2);url(#electricity1)" dur="1s" repeatCount="indefinite"></animate>
+  </rect>
+</svg>
+    </div>
+    <img src="logo.png" alt="Daym-H logo: A futuristic design with three interconnected robotic heads" class="logo" width="200" height="auto">
+    <h1>Daym-H</h1>
+    <p class="tagline">Revolutionizing Business with AI Solutions &amp; Chatbots</p>
+  </header>
+
+  <main>
+  <nav>
+    <ul style="position: relative; overflow: hidden;">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Services.html">Services</a></li>
+  <li><a href="About.html">About</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <div class="glow-effect"></div>
+  <style>
+    nav ul {
+      position: relative;
+      overflow: hidden;
+    }
+    nav ul li a {
+      position: relative;
+      z-index: 1;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #FFFFFF;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    .glow-effect {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    nav ul:hover .glow-effect {
+      opacity: 0.5;
+      animation: rotate 10s linear infinite;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</ul>
+  </nav>
+  <section class="revolution-grid">
+    <div class="revolution-item">
+      <div class="brain-icon">
+        <div class="brain">
+          <div class="synapse" style="top: 20%; left: 30%;"></div>
+          <div class="synapse" style="top: 50%; left: 70%;"></div>
+          <div class="synapse" style="top: 70%; left: 40%;"></div>
+          <div class="synapse" style="top: 30%; left: 60%;"></div>
+        </div>
+      </div>
+      <h2>AI-Powered Insights</h2>
+      <p>Unlock hidden patterns in your data with our advanced AI algorithms, driving informed decision-making across your organization.</p>
+    </div>
+    <div class="revolution-item">
+      <div class="enhanced-robot-icon">
+        <div class="robot-body"></div>
+        <div class="robot-head">
+          <div class="robot-eye left"></div>
+          <div class="robot-eye right"></div>
+          <div class="robot-antenna"></div>
+        </div>
+        <div class="robot-arm left"></div>
+        <div class="robot-arm right"></div>
+      </div>
+      <h2>Intelligent Automation</h2>
+      <p>Streamline your operations with AI-driven automation, reducing costs and increasing efficiency in your business processes.</p>
+    </div>
+    <div class="revolution-item">
+      <div class="revolution-icon">💬</div>
+      <h2>24/7 Customer Support</h2>
+      <p>Enhance customer satisfaction with our AI chatbots, providing instant, personalized support around the clock.</p>
+    </div>
+    <div class="revolution-item">
+      <div class="revolution-icon">📈</div>
+      <h2>Predictive Analytics</h2>
+      <p>Stay ahead of market trends with our AI-powered predictive models, giving you a competitive edge in your industry.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="/revolution" class="cta-button">Join the AI Revolution</a>
+  </div>
+</main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <p>© 2023 Daym-H. Empowering businesses through AI innovation.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Updated</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required="">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revolutionItems = document.querySelectorAll('.revolution-item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revolutionItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(item);
+      });
+
+      // Add pulsing animation to synapses
+      const synapses = document.querySelectorAll('.synapse');
+      synapses.forEach((synapse, index) => {
+        synapse.style.animation = `spark 2s infinite ${index * 0.5}s`;
+      });
+
+      // Back to Top button functionality
+      const backToTopButton = document.getElementById('back-to-top');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Add Font Awesome for social icons
+      const fontAwesome = document.createElement('link');
+      fontAwesome.rel = 'stylesheet';
+      fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+      document.head.appendChild(fontAwesome);
+    });
+  </script>
+</body></html>

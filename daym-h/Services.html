@@ -1,0 +1,257 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daym-H Services: AI Solutions for Business</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --primary-color: #C0C0C0;
+    --secondary-color: #A8A8A8;
+    --bg-color: #E8E8E8;
+    --text-color: #333333;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #D0D0D0, #F0F0F0, #D0D0D0);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    padding: 1rem 0;
+    border-radius: 5px;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .service-item {
+    background: linear-gradient(135deg, #D8D8D8, #F8F8F8, #D8D8D8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .service-item h2 {
+    color: var(--text-color);
+    margin-top: 0;
+  }
+
+  .cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #A0A0A0, #C8C8C8, #A0A0A0);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-button:hover {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background: linear-gradient(135deg, #B0B0B0, #D8D8D8, #B0B0B0);
+    color: var(--text-color);
+    padding: 2rem 0;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    margin: 1rem;
+    min-width: 250px;
+  }
+
+  .social-icons {
+    margin-top: 1rem;
+  }
+
+  .social-icons a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #FFFFFF;
+  }
+
+  .newsletter-form {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .newsletter-form button {
+    padding: 0.5rem 1rem;
+    background: var(--secondary-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .newsletter-form button:hover {
+    background: var(--primary-color);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Daym-H logo: A futuristic design with three interconnected robotic heads" class="logo" width="200" height="auto">
+    <h1>Daym-H Services</h1>
+  </header>
+
+  <main>
+    <nav>
+      <ul style="position: relative; overflow: hidden;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <div class="glow-effect"></div>
+      </ul>
+    </nav>
+
+    <h1>Our Services</h1>
+
+    <section class="services-grid">
+      <div class="service-item">
+        <h2>AI-Powered Insights</h2>
+        <p>Unlock hidden patterns in your data with our advanced AI algorithms, driving informed decision-making across your organization.</p>
+      </div>
+      <div class="service-item">
+        <h2>Intelligent Automation</h2>
+        <p>Streamline your operations with AI-driven automation, reducing costs and increasing efficiency in your business processes.</p>
+      </div>
+      <div class="service-item">
+        <h2>24/7 Customer Support</h2>
+        <p>Enhance customer satisfaction with our AI chatbots, providing instant, personalized support around the clock.</p>
+      </div>
+      <div class="service-item">
+        <h2>Predictive Analytics</h2>
+        <p>Stay ahead of market trends with our AI-powered predictive models, giving you a competitive edge in your industry.</p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a href="/contact" class="cta-button">Get Started</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <p>© 2023 Daym-H. Empowering businesses through AI innovation.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Stay Updated</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required="">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Add Font Awesome for social icons
+    const fontAwesome = document.createElement('link');
+    fontAwesome.rel = 'stylesheet';
+    fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+    document.head.appendChild(fontAwesome);
+  </script>
+</body></html>
